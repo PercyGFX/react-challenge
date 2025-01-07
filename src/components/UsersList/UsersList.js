@@ -20,17 +20,17 @@ const UsersList = () => {
   //console.log(users);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className=" text-center mx-auto w-full">Loading...</div>;
   }
 
   return (
     // User List goes here...
-    <div>
+    <div className="mx-3">
       {showUsers ? (
         <>
           <div>
-            <h1 className="text-2xl font-semibold mb-4">Users List</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-3">
+            <h1 className="text-2xl font-semibold mb-4 ">Users List</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
               {users?.users?.map((user) => (
                 <UserCard key={user.id} user={user} />
               ))}

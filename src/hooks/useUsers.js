@@ -20,3 +20,16 @@ export function useUsers(limit = 10, page = 1) {
     enabled: showUsers,
   });
 }
+
+/// fetch single user
+
+export function useSingleUser(userId) {
+  return useQuery({
+    queryKey: ["user", userId],
+    queryFn: () =>
+      axios
+        .get(`https://dummyjson.com/users/${userId}`)
+        .then((res) => res.data),
+    enabled: !!userId,
+  });
+}
