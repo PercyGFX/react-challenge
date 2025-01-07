@@ -11,7 +11,7 @@ function SingleUser() {
     return <div className=" text-center mx-auto w-full">Loading...</div>;
   }
 
-  //console.log(user);
+  console.log(user);
   return (
     <div className="mx-3">
       <div className="mb-6">
@@ -23,17 +23,17 @@ function SingleUser() {
         <div className=" flex flex-col md:flex-row items-center justify-center md:justify-start gap-x-4">
           <img src={user?.image} alt={user?.firstName} />
 
-          <div className="text-center py-3">
-            <h1 className="text-2xl font-semibold">
+          <div className=" text-center md:text-left py-3">
+            <h1 className="text-2xl font-semibold my-1">
               {user?.firstName} {user?.lastName}
             </h1>
-            <p className="text-gray-500">{user?.email}</p>
-            <p className="text-gray-500">{user?.phone}</p>
-            <div className=" flex mt-5 gap-x-3">
-              <span className=" bg-blue-200 rounded-full px-3 py-1">
+            <p className="text-gray-500 my-1">{user?.email}</p>
+            <p className="text-gray-500 my-1">{user?.phone}</p>
+            <div className=" flex mt-3 gap-x-3">
+              <span className=" bg-blue-200 rounded-full px-3 py-1 font-semibold">
                 {user?.role}
               </span>
-              <span className=" bg-green-200 rounded-full px-3 py-1">
+              <span className=" bg-green-200 rounded-full px-3 py-1 font-semibold">
                 {user?.company?.title}
               </span>
             </div>
