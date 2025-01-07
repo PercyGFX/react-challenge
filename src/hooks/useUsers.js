@@ -1,8 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useAtom } from "jotai";
+import { showUsersAtom } from "../utils/atoms";
 
 // hook to fetch users data
 export function useUsers(limit = 10, page = 1) {
+  const [showUsers, setShowUsers] = useAtom(showUsersAtom);
+
   return useQuery({
     queryKey: ["users"],
     queryFn: () =>
@@ -13,5 +17,6 @@ export function useUsers(limit = 10, page = 1) {
           }`
         )
         .then((res) => res.data),
+    enabled: showUsers,
   });
 }
