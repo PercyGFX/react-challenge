@@ -44,9 +44,49 @@ function SingleUser() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-5">
           {/* profile */}
-          <div className="bg-gray-100 p-6 rounded-lg">test</div>
+          <div className="bg-gray-100 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-4">Personal Information</h2>
+            <div className=" space-y-2">
+              <p className="">
+                <span className="font-semibold">Username:</span>{" "}
+                {user?.username}
+              </p>
+              <p className="">
+                <span className="font-semibold">Age:</span> {user?.age}
+              </p>
+              <p className="">
+                <span className=" font-semibold">Date of Birth:</span>{" "}
+                {user?.birthDate}
+              </p>
+
+              <p className="">
+                <span className="font-semibold">Height:</span> {user?.height}
+              </p>
+            </div>
+          </div>
           {/* address */}
-          <div className="bg-gray-100 p-6 rounded-lg">test</div>
+          <div className="bg-gray-100 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-4">Address Information</h2>
+            <div className=" space-y-2">
+              <p className="">
+                <span className="font-semibold">Street:</span>{" "}
+                {user?.address?.address}
+              </p>
+              <p className="">
+                <span className="font-semibold">City:</span>{" "}
+                {user?.address?.city}
+              </p>
+              <p className="">
+                <span className=" font-semibold">State:</span>{" "}
+                {user?.address?.state}
+              </p>
+
+              <p className="">
+                <span className="font-semibold">Country:</span>{" "}
+                {user?.address?.country}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
