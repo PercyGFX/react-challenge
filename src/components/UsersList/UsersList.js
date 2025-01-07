@@ -1,10 +1,19 @@
-import React from 'react'
+import React from "react";
+import { useUsers } from "../../hooks/useUsers";
 
 const UsersList = () => {
-    return (
-        // User List goes here...
-        <div></div>
-    )
-}
+  const { data: users, isLoading, isError } = useUsers();
 
-export default UsersList
+  console.log(users);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    // User List goes here...
+    <div></div>
+  );
+};
+
+export default UsersList;
