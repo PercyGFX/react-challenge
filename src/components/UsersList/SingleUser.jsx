@@ -39,6 +39,15 @@ function SingleUser() {
             </div>
           </div>
         </div>
+
+        {/* profile info */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-5">
+          {/* profile */}
+          <div className="bg-gray-100 p-6 rounded-lg">test</div>
+          {/* address */}
+          <div className="bg-gray-100 p-6 rounded-lg">test</div>
+        </div>
       </div>
     </div>
   );
