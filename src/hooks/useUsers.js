@@ -8,7 +8,7 @@ export function useUsers(limit = 10, page = 1) {
   const [showUsers, setShowUsers] = useAtom(showUsersAtom);
 
   return useQuery({
-    queryKey: ["users"],
+    queryKey: ["users", page],
     queryFn: () =>
       axios
         .get(
